@@ -2,6 +2,10 @@
   "name": "dmitry-n-medvedev",
   "description": "personal site",
   "version": "0.0.0",
+  "engines": {
+    "node": "= 13.11.0"
+  },
+  "engine-strict": true,
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",

@@ -1,0 +1,31 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - development
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [13.11.0]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+
+    - name: Using version ${{ matrix.node-version }} of NodeJS
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run export
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.build_sapper }}
+        BRANCH: master
+        FOLDER: __sapper__/export
