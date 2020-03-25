@@ -1,0 +1,249 @@
+{
+  "foreword": "A never ending learner, software architect and full-stack developer. Looking for an opportunity to bring quality technology, style and speed to real - sector economy. I do firmly believe that a system of any significance can nowadays be built only by a team. And a team, as opposed to a group of people, is grown around openness and truth. I want to be a part of a team, or help build a new one.",
+  "stack": {
+    "tags": [
+      "languages",
+      "front-end",
+      "back-end",
+      "libraries",
+      "frameworks",
+      "databases",
+      "servers",
+      "tools",
+      "containers",
+      "os"
+    ],
+    "items": {
+      "javascript": {
+        "tags": ["languages", "front-end", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/ComputerLanguage",
+          "name": "javascript",
+          "description": "comment for javascript",
+          "url": "https://www.ecma-international.org/publications/standards/Ecma-262.htm"
+        }
+      },
+      "python": {
+        "tags": ["languages", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/ComputerLanguage",
+          "name": "python",
+          "description": "comment for python",
+          "url": "https://www.python.org/"
+        }
+      },
+      "dart": {
+        "tags": ["languages", "front-end"],
+        "schema": {
+          "itemtype": "http://schema.org/ComputerLanguage",
+          "name": "dart",
+          "description": "comment for dart",
+          "url": "https://dart.dev/"
+        }
+      },
+      "flutter": {
+        "tags": ["frameworks", "front-end"],
+        "schema": {
+          "itemtype": "http://schema.org/runtimePlatform",
+          "name": "flutter",
+          "description": "comment for flutter",
+          "url": "https://flutter.dev/"
+        }
+      },
+      "redis": {
+        "tags": ["databases"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "redis",
+          "description": "comment for redis",
+          "applicationCategory": "databases",
+          "url": "https://redis.io/"
+        }
+      },
+      "postgres": {
+        "tags": ["databases"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "postgres",
+          "description": "comment for postgres",
+          "applicationCategory": "databases",
+          "url": "https://www.postgresql.org/"
+        }
+      },
+      "mysql": {
+        "tags": ["databases"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "mysql",
+          "description": "comment for mysql",
+          "applicationCategory": "databases",
+          "url": "https://www.mysql.com/"
+        }
+      },
+      "neo4j": {
+        "tags": ["databases"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "neo4j",
+          "description": "comment for neo4j",
+          "applicationCategory": "databases",
+          "url": "https://neo4j.com/"
+        }
+      },
+      "nginx": {
+        "tags": ["servers"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "nginx",
+          "description": "comment for nginx",
+          "applicationCategory": "web servers",
+          "url": "http://nginx.org/"
+        }
+      },
+      "apache": {
+        "tags": ["servers"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "apache",
+          "description": "comment for apache",
+          "applicationCategory": "web servers",
+          "url": "https://www.apache.org/"
+        }
+      },
+      "RabbitMQ": {
+        "tags": ["servers"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "RabbitMQ",
+          "description": "comment for RabbitMQ",
+          "applicationCategory": "message bus",
+          "url": "https://www.rabbitmq.com/"
+        }
+      },
+      "WebSockets": {
+        "tags": ["technology"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "WebSockets",
+          "description": "comment for WebSockets",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+        }
+      },
+      "Svelte": {
+        "tags": ["front-end", "frameworks"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "Svelte",
+          "description": "comment for WebSockets",
+          "url": "https://svelte.dev/"
+        }
+      },
+      "React/Redux/Redux-Saga": {
+        "tags": ["front-end", "frameworks"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "React/Redux/Redux-Saga",
+          "description": "React/Redux/Redux-Saga",
+          "url": "https://reactjs.org/"
+        }
+      },
+      "μWebSockets": {
+        "tags": ["libraries"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "μWebSockets",
+          "description": "comment for μWebSockets",
+          "codeRepository": "https://github.com/uNetworking/uWebSockets.js",
+          "url": "https://github.com/uNetworking/uWebSockets.js"
+        }
+      },
+      "flatbuffers": {
+        "tags": ["libraries"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "flatbuffers",
+          "description": "comment for flatbuffers",
+          "url": "https://google.github.io/flatbuffers/"
+        }
+      },
+      "git": {
+        "tags": ["tools"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "git",
+          "description": "comment for git",
+          "url": "https://git-scm.com/"
+        }
+      },
+      "gitlab": {
+        "tags": ["tools"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "gitlab",
+          "description": "comment for gitlab",
+          "url": "https://about.gitlab.com/"
+        }
+      },
+      "confluence": {
+        "tags": ["tools"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "confluence",
+          "description": "comment for confluence",
+          "url": "https://www.atlassian.com/software/confluence"
+        }
+      },
+      "jira": {
+        "tags": ["tools"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "name": "jira",
+          "description": "comment for jira",
+          "url": "https://www.atlassian.com/software/jira"
+        }
+      },
+      "linux": {
+        "tags": ["os"],
+        "schema": {
+          "itemtype": "http://schema.org/operatingSystem",
+          "name": "linux",
+          "description": "comment for linux",
+          "url": "https://www.linux.org/"
+        }
+      },
+      "mac os": {
+        "tags": ["os"],
+        "schema": {
+          "itemtype": "http://schema.org/operatingSystem",
+          "name": "mac os",
+          "description": "comment for mac os",
+          "url": "https://www.apple.com/macos/"
+        }
+      },
+      "docker": {
+        "tags": ["containers"],
+        "schema": {
+          "itemtype": "http://schema.org/runtime",
+          "name": "docker",
+          "description": "comment for mac docker",
+          "url": "https://www.docker.com/"
+        }
+      }
+    }
+  },
+  "timeline": [
+    {
+      "started": "Aug 2018",
+      "ended": null,
+      "company": {
+        "name": "self employed",
+        "description": "",
+        "role": {
+          "name": "",
+          "description": ""
+        },
+        "stack": []
+      }
+    }
+  ]
+}
