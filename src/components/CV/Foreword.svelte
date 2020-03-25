@@ -18,7 +18,7 @@
   #foreword {
     grid-area: var(--foreword-grid-area);
     display: flex;
-    padding: 1rem 1.5rem;
+    padding: 1vh 1.5vw;
   }
 </style>
 

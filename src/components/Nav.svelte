@@ -3,18 +3,19 @@
 </script>
 
 <style>
-	nav {
+	/* nav {
 		border-bottom: 1px solid rgba(255, 62, 0, 0.1);
 		font-weight: 300;
 		padding: 0 1em;
-		font-size: 1.5rem;
+		font-size: 1.5vw;
 		text-transform: lowercase;
-	}
+	} */
 
 	ul {
 		margin: 0;
 		padding: 0;
 		display: flex;
+		list-style-type: none;
 	}
 
 	/* clearfix */
@@ -46,7 +47,7 @@
 
 	a {
 		text-decoration: none;
-		padding: 1em 0.5em;
+		/* padding: 1em 0.5em; */
 		display: block;
 		color: var(--font-color);
 	}
@@ -54,7 +55,11 @@
 
 <nav>
 	<ul>
-		<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>CV</a></li>
+		<li>
+			<h2>
+				<a aria-current='{segment === undefined ? "page" : undefined}' href='.'>CV</a>
+			</h2>
+		</li>
 		<!-- <li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li> -->
 
 		<!-- <li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li> -->

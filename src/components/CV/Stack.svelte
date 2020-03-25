@@ -3,7 +3,6 @@
   import {
     ALL_TAG,
   } from '../../common/constants.mjs';
-  import MF from '../Microformat.svelte';
 
   export let gridArea = null;
   export let data = null;
@@ -70,8 +69,8 @@
   :root {
     --stack-grid-area: '';
     --stack-tags-background-color: hsla(0, 0%, 88%, 1.0);
-    --stack-currentTag-background-color: hsla(30, 100%, 59%, 1.0);
-    --stack-tags-hover-background-color: hsla(30, 100%, 59%, 0.3);
+    /* --stack-currentTag-background-color: hsla(30, 100%, 59%, 1.0); */
+    /* --stack-tags-hover-background-color: hsla(30, 100%, 59%, 0.3); */
     --stack-items-stack-item-background-color: hsla(203, 37%, 63%, 1.0);
     --stack-items-stack-item-color: hsla(0, 0%, 0%, 1.0);
     --highlighted-stack-item-color: hsla(0, 0%, 100%, 1.0);
@@ -80,13 +79,13 @@
   #stack {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4rem 0.5rem 1fr;
+    grid-template-rows: 4vh 2.5vh 1fr;
     grid-template-areas:
       'stack-tags'
       '.'
       'stack-items'
     ;
-    grid-gap: 0.125rem;
+    grid-gap: var(--layout-padding);
   }
 
   #stack > #tags {
@@ -102,8 +101,8 @@
     contain: strict;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 4rem;
-    grid-gap: 0.125rem;
+    grid-auto-rows: 8vh;
+    grid-gap: calc(var(--layout-padding) / 2);
   }
 
   #stack > #items .stack-item {
@@ -113,8 +112,9 @@
 
     filter: opacity(0.25);
 
-    background-color: var(--stack-items-stack-item-background-color);
-    color: var(--stack-items-stack-item-color);
+    background-color: var(--highlighted-background-color);
+    will-change: background-color;
+    color: var(--font-color);
   }
 
   #stack > #tags > .tag {
@@ -129,24 +129,25 @@
     contain: strict;
   }
 
-  #stack > #tags:hover > .tag:not(:hover):not(.currentTag) {
-    filter: blur(2px) opacity(0.5);
-  }
-
-  #stack > #tags:hover > .tag:not(.currentTag):hover {
-    border-bottom-color: var(--stack-tags-hover-background-color);
-    transition: border-bottom-color 150ms var(--timing-function), filter 50ms var(--timing-function);
-    filter: blur(0);
+  @media (pointer: fine) {
+    #stack > #tags:hover > .tag:not(:hover):not(.currentTag) {
+      filter: blur(2px) opacity(0.5);
+    }
+  
+    #stack > #tags:hover > .tag:not(.currentTag):hover {
+      border-bottom-color: var(--accented-color-hover);
+      transition: border-bottom-color 150ms var(--timing-function), filter 50ms var(--timing-function);
+      filter: blur(0);
+    }
   }
 
   .currentTag {
-    border-bottom-color: var(--stack-currentTag-background-color) !important;
+    border-bottom-color: var(--accented-color) !important;
     transition: border-bottom-color 50ms var(--timing-function), filter 50ms var(--timing-function);
   }
 
   :global(.highlighted-stack-item) {
     filter: opacity(1) !important;
-    color: var(--highlighted-stack-item-color) !important;
   }
 </style>
 
@@ -159,7 +160,7 @@
   <section id='items'>
     {#each Object.keys(items) as item}
       <div class='stack-item' data-tags={itemTags(item)}>
-        <MF schema={(items[item]).schema}>{item}</MF>
+        {item}
       </div>
     {/each}
   </section>
