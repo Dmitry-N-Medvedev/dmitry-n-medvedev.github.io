@@ -23,6 +23,15 @@
           "url": "https://www.ecma-international.org/publications/standards/Ecma-262.htm"
         }
       },
+      "nodejs": {
+        "tags": ["back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/runtime",
+          "name": "nodejs",
+          "description": "comment for mac nodejs",
+          "url": "https://nodejs.org/"
+        }
+      },
       "python": {
         "tags": ["languages", "back-end"],
         "schema": {
@@ -234,15 +243,24 @@
   "timeline": [
     {
       "started": "Aug 2018",
-      "ended": null,
-      "company": {
-        "name": "self employed",
-        "description": "",
-        "role": {
-          "name": "",
-          "description": ""
+      "ended": "still working on it",
+      "info": {
+        "company": {
+          "name": "self employed",
+          "description": "baby steps"
         },
-        "stack": []
+        "role": {
+          "name": "full-stack developer, product manager",
+          "responsibilities": "all the stuff"
+        },
+        "stack": [
+          "nodejs",
+          "redis",
+          "rabbitmq",
+          "postgres",
+          "flatbuffers",
+          "svelte"
+        ]
       }
     }
   ]

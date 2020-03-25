@@ -1,6 +1,7 @@
 <script>
   import Foreword from './Foreword.svelte';
   import Stack from './Stack.svelte';
+  import Timeline from './Timeline.svelte';
 
   export let data = null;
 </script>
@@ -9,11 +10,13 @@
   #cv {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: 1fr 2fr;
+    grid-auto-rows: min-content;
     grid-template-areas:
       'foreword'
       'stack'
+      'timeline'
     ;
+    grid-gap: 3vh;
   }
 </style>
 
@@ -24,6 +27,9 @@
     {/if}
     {#if data.stack}
       <Stack gridArea='stack' data={data.stack} />
+    {/if}
+    {#if data.timeline}
+      <Timeline gridArea='timeline' data={data.timeline} />
     {/if}
   {/if}
 </article>
