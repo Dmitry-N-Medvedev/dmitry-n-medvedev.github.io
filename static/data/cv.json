@@ -1,4 +1,27 @@
 {
+  "contacts": {
+    "name": "Dmitry N. Medvedev",
+    "country": "Germany",
+    "city": "Berlin",
+    "email": "dmitry.medvedev@gmail.com",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "http://bit.ly/2zbHq2t",
+        "svg": "/icons/linkedin.svg"
+      },
+      {
+        "name": "twitter",
+        "url": "https://bit.ly/2UxN9aC",
+        "svg": "/icons/twitter.svg"
+      },
+      {
+        "name": "facebook",
+        "url": "https://bit.ly/2UhsatO",
+        "svg": "/icons/facebook.svg"
+      }
+    ]
+  },
   "foreword": "A never ending learner, software architect and full-stack developer. Looking for an opportunity to bring quality technology, style and speed to real - sector economy. I do firmly believe that a system of any significance can nowadays be built only by a team. And a team, as opposed to a group of people, is grown around openness and truth. I want to be a part of a team, or help build a new one.",
   "stack": {
     "tags": [
@@ -15,253 +38,333 @@
     ],
     "items": {
       "javascript": {
-        "tags": ["languages", "front-end", "back-end"],
-        "schema": {
-          "itemtype": "http://schema.org/ComputerLanguage",
-          "name": "javascript",
-          "description": "comment for javascript",
-          "url": "https://www.ecma-international.org/publications/standards/Ecma-262.htm"
-        }
+        "tags": ["languages", "front-end", "back-end"]
       },
       "nodejs": {
-        "tags": ["back-end"],
-        "schema": {
-          "itemtype": "http://schema.org/runtime",
-          "name": "nodejs",
-          "description": "comment for mac nodejs",
-          "url": "https://nodejs.org/"
-        }
+        "tags": ["back-end"]
       },
       "python": {
-        "tags": ["languages", "back-end"],
-        "schema": {
-          "itemtype": "http://schema.org/ComputerLanguage",
-          "name": "python",
-          "description": "comment for python",
-          "url": "https://www.python.org/"
-        }
+        "tags": ["languages", "back-end"]
       },
       "dart": {
-        "tags": ["languages", "front-end"],
-        "schema": {
-          "itemtype": "http://schema.org/ComputerLanguage",
-          "name": "dart",
-          "description": "comment for dart",
-          "url": "https://dart.dev/"
-        }
+        "tags": ["languages", "front-end"]
       },
       "flutter": {
-        "tags": ["frameworks", "front-end"],
-        "schema": {
-          "itemtype": "http://schema.org/runtimePlatform",
-          "name": "flutter",
-          "description": "comment for flutter",
-          "url": "https://flutter.dev/"
-        }
+        "tags": ["frameworks", "front-end"]
       },
       "redis": {
-        "tags": ["databases"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "redis",
-          "description": "comment for redis",
-          "applicationCategory": "databases",
-          "url": "https://redis.io/"
-        }
+        "tags": ["databases", "back-end"]
       },
       "postgres": {
-        "tags": ["databases"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "postgres",
-          "description": "comment for postgres",
-          "applicationCategory": "databases",
-          "url": "https://www.postgresql.org/"
-        }
+        "tags": ["databases", "back-end"]
       },
       "mysql": {
-        "tags": ["databases"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "mysql",
-          "description": "comment for mysql",
-          "applicationCategory": "databases",
-          "url": "https://www.mysql.com/"
-        }
+        "tags": ["databases", "back-end"]
       },
       "neo4j": {
-        "tags": ["databases"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "neo4j",
-          "description": "comment for neo4j",
-          "applicationCategory": "databases",
-          "url": "https://neo4j.com/"
-        }
+        "tags": ["databases", "back-end"]
       },
       "nginx": {
-        "tags": ["servers"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "nginx",
-          "description": "comment for nginx",
-          "applicationCategory": "web servers",
-          "url": "http://nginx.org/"
-        }
+        "tags": ["servers", "back-end"]
       },
       "apache": {
-        "tags": ["servers"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "apache",
-          "description": "comment for apache",
-          "applicationCategory": "web servers",
-          "url": "https://www.apache.org/"
-        }
+        "tags": ["servers", "back-end"]
       },
       "RabbitMQ": {
-        "tags": ["servers"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "RabbitMQ",
-          "description": "comment for RabbitMQ",
-          "applicationCategory": "message bus",
-          "url": "https://www.rabbitmq.com/"
-        }
+        "tags": ["servers", "back-end"]
       },
       "WebSockets": {
-        "tags": ["technology"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareSourceCode",
-          "name": "WebSockets",
-          "description": "comment for WebSockets",
-          "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
-        }
+        "tags": ["technology", "front-end", "back-end"]
       },
       "Svelte": {
-        "tags": ["front-end", "frameworks"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareSourceCode",
-          "name": "Svelte",
-          "description": "comment for WebSockets",
-          "url": "https://svelte.dev/"
-        }
+        "tags": ["front-end", "frameworks"]
       },
       "React/Redux/Redux-Saga": {
-        "tags": ["front-end", "frameworks"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareSourceCode",
-          "name": "React/Redux/Redux-Saga",
-          "description": "React/Redux/Redux-Saga",
-          "url": "https://reactjs.org/"
-        }
+        "tags": ["front-end", "frameworks"]
       },
       "μWebSockets": {
-        "tags": ["libraries"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareSourceCode",
-          "name": "μWebSockets",
-          "description": "comment for μWebSockets",
-          "codeRepository": "https://github.com/uNetworking/uWebSockets.js",
-          "url": "https://github.com/uNetworking/uWebSockets.js"
-        }
+        "tags": ["libraries", "front-end", "back-end"]
       },
       "flatbuffers": {
-        "tags": ["libraries"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareSourceCode",
-          "name": "flatbuffers",
-          "description": "comment for flatbuffers",
-          "url": "https://google.github.io/flatbuffers/"
-        }
+        "tags": ["libraries", "front-end", "back-end"]
       },
       "git": {
-        "tags": ["tools"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "git",
-          "description": "comment for git",
-          "url": "https://git-scm.com/"
-        }
+        "tags": ["tools"]
       },
       "gitlab": {
-        "tags": ["tools"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "gitlab",
-          "description": "comment for gitlab",
-          "url": "https://about.gitlab.com/"
-        }
+        "tags": ["tools"]
       },
       "confluence": {
-        "tags": ["tools"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "confluence",
-          "description": "comment for confluence",
-          "url": "https://www.atlassian.com/software/confluence"
-        }
+        "tags": ["tools"]
       },
       "jira": {
-        "tags": ["tools"],
-        "schema": {
-          "itemtype": "http://schema.org/SoftwareApplication",
-          "name": "jira",
-          "description": "comment for jira",
-          "url": "https://www.atlassian.com/software/jira"
-        }
+        "tags": ["tools"]
       },
       "linux": {
-        "tags": ["os"],
-        "schema": {
-          "itemtype": "http://schema.org/operatingSystem",
-          "name": "linux",
-          "description": "comment for linux",
-          "url": "https://www.linux.org/"
-        }
+        "tags": ["os"]
       },
       "mac os": {
-        "tags": ["os"],
-        "schema": {
-          "itemtype": "http://schema.org/operatingSystem",
-          "name": "mac os",
-          "description": "comment for mac os",
-          "url": "https://www.apple.com/macos/"
-        }
+        "tags": ["os"]
       },
       "docker": {
-        "tags": ["containers"],
-        "schema": {
-          "itemtype": "http://schema.org/runtime",
-          "name": "docker",
-          "description": "comment for mac docker",
-          "url": "https://www.docker.com/"
-        }
+        "tags": ["containers"]
       }
     }
   },
   "timeline": [
     {
-      "started": "Aug 2018",
-      "ended": "still working on it",
+      "started": "Mar 2018",
+      "ended": "Aug 2018",
       "info": {
         "company": {
-          "name": "self employed",
-          "description": "baby steps"
+          "name": "FCG Germany GmbH",
+          "description": "Leading the digitization of the automotive sales sector through technology, infrastructure creation and the promotion of transportation financing solutions for SME and aspiring consumers in these frontier markets."
         },
         "role": {
-          "name": "full-stack developer, product manager",
-          "responsibilities": "all the stuff"
+          "name": "software engineer",
+          "responsibilities": [
+            "participate in building the auction subsystem"
+          ]
         },
         "stack": [
           "nodejs",
+          "graphql",
+          "mysql",
           "redis",
-          "rabbitmq",
-          "postgres",
-          "flatbuffers",
-          "svelte"
+          "rabbitmq"
         ]
       }
+    },
+    {
+      "started": "Nov 2016",
+      "ended": "Dec 2017",
+      "info": {
+        "company": {
+          "name": "Eine",
+          "description": "Fintech startup aimed at helping its customers optimize their spendings and receive exclusive health insurance and electricity contracts."
+        },
+        "role": {
+          "name": "CTO/full-stack developer",
+          "responsibilities": [
+            "develop the first draft of the architecture",
+            "define the processes related to development",
+            "organize initial data load and processing"
+          ]
+        },
+        "stack": [
+          "nodejs",
+          "postgres",
+          "react",
+          "redis",
+          "rabbitmq"
+        ]
+      }
+    },
+    {
+      "started": "Mar 2016",
+      "ended": "Nov 2016",
+      "info": {
+        "company": {
+          "name": "Cubits",
+          "description": "An all-inclusive platform to buy, sell and accept Bitcoin."
+        },
+        "role": {
+          "name": "full-stack developer",
+          "responsibilities": [
+            "Re-architecture and re-implement an existing Django analytical system (C.M.I.) for the sales guys and the CEO due to its inability to any longer handle the high load",
+            "Architectured the system as a set of microservices implemented first in Python and rewritten for Node JS later",
+            "Re-created the design of the front-end via Flexbox and CSS Grid",
+            "Implemented data push to the client device via  WebSockets for near real-time data update",
+            "Created a live-search facility with help of Redis for the customers to be able to find any transaction by any significant search token in less than a second"
+          ]
+        },
+        "stack": [
+          "react",
+          "redux",
+          "redux-saga",
+          "javascript",
+          "websockets",
+          "nodejs",
+          "python",
+          "nginx",
+          "rabbitmq",
+          "redis"
+        ]
+      }
+    },
+    {
+      "started": "Sep 2015",
+      "ended": "Dec 2015",
+      "info": {
+        "company": {
+          "name": "Videopath",
+          "description": "An inventor of an interactive video playing/enhancing platform."
+        },
+        "role": {
+          "name": "full-stack developer",
+          "responsibilities": [
+            "Architecture and implement a microservice-based system for video transcoding"
+          ]
+        },
+        "stack": [
+          "aws",
+          "python",
+          "ffmpeg"
+        ]
+      }
+    },
+    {
+      "started": "Oct 2011",
+      "ended": "Mar 2015",
+      "info": {
+        "company": {
+          "name": "ZeeRabbit",
+          "description": "An in-game ad technical solution."
+        },
+        "role": {
+          "name": "analyst principal",
+          "responsibilities": [
+            "Participate in refining product vision",
+            "Develop and manage the process of providing general analytics, competitor analysis",
+            "Develop and manage the process of collecting customer feedback",
+            "Research in the field of bleeding-edge client-side and server-side technologies and architectural approaches that could benefit ZeeRabbit GmbH — massive parallel computations",
+            "stream/batch processing, tools and libraries for client-side development, etc.",
+            "Create system architecture, initial design and implement statistical site for ZeeRabbit’s customers",
+            "Manage the documentation project ( API ), internal Knowledge Base",
+            "Participate in API design",
+            "Prepare business and technical presentations",
+            "Manage servers (Debian Linux) and security",
+            "Develop the ZeeRabbit Build Conveyer in Cmake"
+          ]
+        },
+        "stack": [
+          "ZeroC ICE",
+          "hadoop",
+          "python",
+          "postgres"
+        ]
+      }
+    },
+    {
+      "started": "May 2011",
+      "ended": "Oct 2011",
+      "info": {
+        "company": {
+          "name": "INVEL",
+          "description": ""
+        },
+        "role": {
+          "name": "IT Manager",
+          "responsibilities": [
+            "Manage development of invel.ru and smartgrid.ru portals"
+          ]
+        },
+        "stack": []
+      }
+    },
+    {
+      "started": "Mar 2010",
+      "ended": "Nov 2010",
+      "info": {
+        "company": {
+          "name": "RusHydro",
+          "description": ""
+        },
+        "role": {
+          "name": "First-Line Support Team Manager",
+          "responsibilities": [
+            "Incident management (ITIL)"
+          ]
+        },
+        "stack": []
+      }
+    },
+    {
+      "started": "Sep 2009",
+      "ended": "Feb 2009",
+      "info": {
+        "company": {
+          "name": "Makita Russia",
+          "description": ""
+        },
+        "role": {
+          "name": "IT Project Manager/CIO",
+          "responsibilities": [
+            "Establish information security, including anti-virus protection",
+            "Manage the development and integration of Infor LX CRM",
+            "Manage technical and user documentation",
+            "Help employees move to the Infor LX CRM",
+            "Establish technical support Dept."
+          ]
+        },
+        "stack": []
+      }
+    },
+    {
+      "started": "Aug 2008",
+      "ended": "Dec 2008",
+      "info": {
+        "company": {
+          "name": "InfoWatch",
+          "description": ""
+        },
+        "role": {
+          "name": "Head of Intellectual Property Dept.",
+          "responsibilities": [
+            "Manage software technology patenting projects"
+          ]
+        },
+        "stack": []
+      }
+    },
+    {
+      "started": "Sep 2004",
+      "ended": "Jun 2008",
+      "info": {
+        "company": {
+          "name": "Kaspersky Lab",
+          "description": ""
+        },
+        "role": {
+          "name": "Intellectual Property Analyst",
+          "responsibilities": [
+            "Participate in technology patenting projects in Russia and USA",
+            "Consult technical project managers regarding choosing right software packages in regards to licensing matters",
+            "Supervise the marketing materials published by the company so that no know-how technologies and sensitive insights were exposed"
+          ]
+        },
+        "stack": []
+      }
+    }
+  ],
+  "education": [
+    {
+      "year": 2019,
+      "institution": "Redis University",
+      "certificates": [
+        {
+          "id": "0bb96c58f8004b59bacb5aa19eb7c9fe",
+          "name": "RU202: Redis Streams",
+          "dateIssued": "May 22, 2019",
+          "url": "https://bit.ly/2UEl80Z"
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "institution": "Hydroschool Corporate University, ITIL (incident management)"
+    },
+    {
+      "year": 2009,
+      "institution": "Infosystems, «WatchGuard managed distributed secure systems»"
+    },
+    {
+      "year": 2009,
+      "institution": "WIPO, Software patenting"
+    },
+    {
+      "year": 1998,
+      "institution": "Shandrinsk State Pedagogical Institute, English Language Dept. Course in psychology."
     }
   ]
 }
