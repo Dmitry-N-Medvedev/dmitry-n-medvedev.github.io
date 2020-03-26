@@ -4,6 +4,7 @@
     "country": "Germany",
     "city": "Berlin",
     "email": "dmitry.medvedev@gmail.com",
+    "role": "software engineer",
     "links": [
       {
         "name": "LinkedIn",
@@ -341,6 +342,7 @@
     {
       "year": 2019,
       "institution": "Redis University",
+      "url": "https://university.redislabs.com/",
       "certificates": [
         {
           "id": "0bb96c58f8004b59bacb5aa19eb7c9fe",
@@ -352,19 +354,61 @@
     },
     {
       "year": 2010,
-      "institution": "Hydroschool Corporate University, ITIL (incident management)"
+      "institution": "Hydropower Corporate University",
+      "url": "http://www.korung.rushydro.ru/",
+      "certificates": [
+        {
+          "id": null,
+          "name": "ITIL: Incident Management",
+          "dateIssued": null,
+          "url": null
+        }
+      ]
     },
     {
       "year": 2009,
-      "institution": "Infosystems, «WatchGuard managed distributed secure systems»"
+      "institution": "Infosystems",
+      "url": "https://www.infosystems.ru/",
+      "certificates": [
+        {
+          "id": null,
+          "name": "WatchGuard managed distributed secure systems",
+          "dateIssued": null,
+          "url": null
+        }
+      ]
     },
     {
       "year": 2009,
-      "institution": "WIPO, Software patenting"
+      "institution": "WIPO",
+      "url": "https://www.wipo.int/",
+      "certificates": [
+        {
+          "id": null,
+          "name": "Software patenting",
+          "dateIssued": null,
+          "url": null
+        }
+      ]
     },
     {
       "year": 1998,
-      "institution": "Shandrinsk State Pedagogical Institute, English Language Dept. Course in psychology."
+      "institution": "Shandrinsk State Pedagogical Institute",
+      "url": "http://shgpi.edu.ru/",
+      "certificates": [
+        {
+          "id": null,
+          "name": "English Language Dept.",
+          "dateIssued": null,
+          "url": null
+        },
+        {
+          "id": null,
+          "name": "Course in child psychology",
+          "dateIssued": null,
+          "url": null
+        }
+      ]
     }
   ]
 }
