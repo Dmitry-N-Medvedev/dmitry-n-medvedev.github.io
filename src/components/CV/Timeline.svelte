@@ -1,21 +1,11 @@
 <script>
-  import { onMount } from 'svelte';
+  import UL from '../html/UL.svelte';
 
-  export let gridArea = null;
   export let data = null;
-
-  let root = null;
-
-  onMount(() => {
-    root = document.documentElement;
-
-    root.style.setProperty('--timeline-grid-area', gridArea);
-  });
 </script>
 
 <style>
   :root {
-    --timeline-grid-area: '';
     --timeline-item-dates-background-color: hsla(203, 37%, 63%, 1.0);
     --timeline-item-dates-before-size: 2vw;
     --timeline-item-dates-before-background-color: var(--bg-color);
@@ -24,7 +14,6 @@
 
   #timeline {
     display: grid;
-    grid-area: var(--timeline-grid-area);
     grid-template-columns: 1fr;
     grid-auto-rows: min-content;
     grid-gap: calc(var(--layout-padding) * 24);
@@ -44,11 +33,6 @@
     position: relative;
   }
   
-  .timeline-item:hover {
-    background-color: var(--bg-color);
-    filter: drop-shadow(0px 0px 3px var(--drop-shadow-color));
-  }
-
   .timeline-item-dates {
     grid-area: timeline-item-dates;
     display: grid;
@@ -140,13 +124,6 @@
     line-height: 3.5vh;
   }
 
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: calc(var(--font-size) * 1.5);
-  }
-
   .timeline-item-info-role-responsibilities,
   .timeline-item-info-stack {
     display: grid;
@@ -174,16 +151,6 @@
     padding: 1vh 0.25vw;
   }
 
-  .timeline-item-info-role-responsibilities ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: min-content;
-    grid-gap: calc(var(--layout-padding) * 4);
-    padding: 0 0 0 2vw;
-    margin: 0;
-    list-style-type: decimal-leading-zero;
-  }
-  
   .timeline-item-info-stack {
     grid-template-areas:
       'timeline-item-info-stack-header timeline-item-info-stack-items'
@@ -214,28 +181,12 @@
     position: relative;
     background-color: var(--highlighted-background-color);
   }
-
-  .kv-key,
-  .kv-value {
-    display: flex;
-    align-items: center;
-    align-items: flex-start;
-  }
-
-  .kv-key {
-    flex: 1;
-    justify-content: flex-start;
-    font-variation-settings: "wght" 4, "opsz" 1, "SRIF" 10;
-    font-size: calc(var(--font-size) * 1.25);
-  }
-
-  .kv-value {
-    flex: 2;
-    justify-content: flex-end;
-  }
 </style>
 
 <article id='timeline'>
+  {#if data.length > 0}
+    <h2>employement record</h2>
+  {/if}
   {#each data as record}
     <article class='timeline-item'>
       <div class='timeline-item-dates'>
@@ -261,11 +212,11 @@
               {#if record.info.role.responsibilities.length === 1}
                 {record.info.role.responsibilities}
               {:else}
-                <ul>
+                <UL>
                   {#each record.info.role.responsibilities as responsibility}
                     <li>{responsibility}</li>
                   {/each}
-                </ul>
+                </UL>
               {/if}
             </div>
           </div>

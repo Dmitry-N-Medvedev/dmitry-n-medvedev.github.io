@@ -1,23 +1,18 @@
 <script>
   import { onMount } from 'svelte';
+  import A from '../html/A.svelte';
+  import UL from '../html/UL.svelte';
 
-  export let gridArea = '';
   export let data = null;
 
-  let root = null;
+  const formatDate = new Intl.DateTimeFormat('de-DE');
 
-  onMount(() => {
-    root = document.documentElement;
-
-    root.style.setProperty('--education-grid-area', gridArea);
-  });
+  const dateIssued = (date) => {
+    return formatDate.format(new Date(date));
+  };
 </script>
 
 <style>
-  :root {
-    --education-grid-area: '';
-  }
-
   #education-container {
     grid-area: var(--education-grid-area);
     display: grid;
@@ -43,40 +38,111 @@
   .education-record-year {
     grid-area: education-record-year;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: var(--layout-padding);
   }
 
   .education-record-info {
     grid-area: education-record-info;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'education-record-info-institution'
+      'education-record-info-certificates'
+    ;
+  }
+
+  .education-record-info > * {
+    width: 100%;
+  }
+
+  .education-record-info-institution {
+    grid-area: education-record-info-institution;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-end;
+    font-size: calc(var(--font-size) * 1.25);
+    color: hsl(0, 0%, 98%);
+    background-color: hsla(0, 0%, 44%, 1);
+    padding: 1vh 0.25vw;
+    width: 100%;
+  }
+
+  .education-record-info-certificates {
+    grid-area: education-record-info-certificates;
+    display: flex;
+    margin-top: 2vh;
+    flex: 1;
+  }
+
+  :global(.education-record-info-certificates > ul) {
+    width: 100%;
+  }
+
+  :global(.education-record-info-certificates > ul > li) {
+    display: flex;
+  }
+
+  .education-record-info-certificate {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    grid-gap: calc(var(--layout-padding) * 10);
+    width: 100%;
+  }
+
+  /* :global(.education-record-info-certificate > a) {
+    display: flex;
+    flex: 1;
+  }
+
+  :global(.education-record-info-certificate > a:nth-of-type(2n)) {
+    justify-content: flex-end;
+  } */
+
+  .education-record-info-certificate-name,
+  .education-record-info-certificate-id {
+    display: flex;
+    flex: 1;
   }
 </style>
 
 <article id='education-container'>
+  {#if data.length > 0}
+    <h2>education</h2>
+  {/if}
   {#each data as record}
     <div class='education-record'>
       <div class='education-record-year'>{record.year}</div>
       <div class='education-record-info'>
-        <div class='education-record-info-institution'>{record.institution}</div>
-
-        {#if record.certificates}
-          {#each record.certificates as certificate}
-            <a
-              href='{certificate.url}'
-              class='education-record-info-certificate-url'
-              target='_blank'
-            >
-              <div class='education-record-info-certificate'>
-                <!-- <div class='education-record-info-certificate-dateIssued'>{certificate.dateIssued}</div> -->
-                <div class='education-record-info-certificate-name'>{certificate.name}</div>
-              </div>
-            </a>
-          {/each}
+        <A href={record.url} target='_blank'>
+          <div class='education-record-info-institution'>
+            {record.institution}
+          </div>
+        </A>
+        {#if record.certificates && record.certificates.length > 0}
+          <div class='education-record-info-certificates'>
+            <UL>
+              {#each record.certificates as certificate}
+                <li class='education-record-info-certificate'>
+                  {#if certificate.name}
+                    <A href={certificate.url} underline={false}>
+                      <div class='education-record-info-certificate-name'>{certificate.name}</div>
+                    </A>
+                  {/if}
+                  {#if certificate.id}
+                    <A href={certificate.url} underline={false}>
+                      <div class='education-record-info-certificate-id'>ID: {certificate.id}</div>
+                    </A>
+                  {:else}
+                    <A href={certificate.url} underline={false}>
+                      <div class='education-record-info-certificate-id'>&nbsp;&nbsp;&nbsp;</div>
+                    </A>
+                  {/if}
+                </li>
+              {/each}
+            </UL>
+          </div>
         {/if}
       </div>
     </div>

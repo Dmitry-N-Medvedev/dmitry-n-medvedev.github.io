@@ -10,26 +10,27 @@
   .contacts {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: min-content min-content min-content min-content min-content;
-
+    grid-template-rows: min-content min-content min-content 6vh min-content;
+    grid-gap: calc(var(--layout-padding) * 2) 0;
     font-size: calc(var(--font-size) * 1.25);
   }
 
   :global(.social-network-icons) {
     display: flex;
+    margin-top: 2vh;
   }
 
   :global(.social-network-icons > *:not(:first-of-type)) {
-    margin-left: calc(var(--layout-padding) * 2);
+    margin-left: calc(var(--layout-padding) * 4);
   }
 </style>
 
 <article class='contacts'>
-  <GridBlockRecord className='display-flex justify-content-flex-end'>{data.name}</GridBlockRecord>
+  <GridBlockRecord className='display-flex justify-content-flex-end'><span itemprop='name'>{data.name}</span></GridBlockRecord>
   <GridBlockRecord className='display-flex justify-content-flex-end'>{data.city}</GridBlockRecord>
   <GridBlockRecord className='display-flex justify-content-flex-end'>{data.country}</GridBlockRecord>
   <GridBlockRecord className='display-flex justify-content-flex-end'>
-    <A href='mailto:{data.email}'>{data.email}</A>
+    <A href='mailto:{data.email}'><span itemprop='email'>{data.email}</span></A>
   </GridBlockRecord>
   <GridBlockRecord className='display-flex justify-content-flex-end social-network-icons'>
     <!-- see: https://www.flaticon.com/packs/social-circles -->

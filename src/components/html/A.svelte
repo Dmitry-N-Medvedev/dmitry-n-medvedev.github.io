@@ -1,6 +1,7 @@
 <script>
   export let href = null;
   export let target = '_blank';
+  export let underline = true;
 
   const handleClick = (evt) => {
     const { protocol, pathname } = evt.srcElement;
@@ -9,6 +10,18 @@
   };
 </script>
 
-<a {href} {target} on:click={handleClick}>
+<style>
+  a {
+    display: flex;
+    color: var(--font-color);
+    text-decoration: none;
+  }
+  
+  .underline {
+    border-bottom: 1px solid var(--font-color);
+  }
+</style>
+
+<a {href} {target} on:click={handleClick} class:underline>
   <slot>N/A</slot>
 </a>

@@ -5,7 +5,7 @@
 <style>
   .grid-block-record {
     display: block;
-    padding: calc(var(--layout-padding) * 4) 0;
+    /* padding: calc(var(--layout-padding) * 4) 0; */
   }
 </style>
 
