@@ -33,6 +33,10 @@
 	--drop-shadow-color: hsla(var(--H), var(--S), calc(var(--L) + 40%), var(--A));
 }
 
+* {
+	contain: content;
+}
+
 html,
 body {
 	margin: 0;
