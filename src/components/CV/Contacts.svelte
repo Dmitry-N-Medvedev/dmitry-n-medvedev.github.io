@@ -23,6 +23,10 @@
   :global(.social-network-icons > *:not(:first-of-type)) {
     margin-left: calc(var(--layout-padding) * 4);
   }
+
+  .a {
+    pointer-events: all;
+  }
 </style>
 
 <article class='contacts'>
@@ -35,7 +39,7 @@
   <GridBlockRecord className='display-flex justify-content-flex-end social-network-icons'>
     <!-- see: https://www.flaticon.com/packs/social-circles -->
     {#each data.links as { name, url, svg }}
-      <a href={url} target='_blank'>
+      <a class='a' href={url} target='_blank'>
         <Icon src='{svg}' alt='{name}' />
       </a>
     {/each}

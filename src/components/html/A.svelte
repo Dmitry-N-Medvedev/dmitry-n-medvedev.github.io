@@ -15,6 +15,7 @@
     display: flex;
     color: var(--font-color);
     text-decoration: none;
+    pointer-events: all;
   }
   
   .underline {

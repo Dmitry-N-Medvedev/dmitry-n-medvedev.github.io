@@ -113,6 +113,7 @@
     transition: border-bottom-color 500ms var(--timing-function);
     will-change: border-bottom-color;
     contain: strict;
+    pointer-events: all;
   }
 
   @media (pointer: fine) {
