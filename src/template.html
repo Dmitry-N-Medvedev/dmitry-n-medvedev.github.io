@@ -16,7 +16,43 @@
 
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
-	<meta name='theme-color' content='#333333'>
+	<meta name='theme-color' content='#FFFFFF'>
+	<meta name="description" content="Software Engineer">
+	<meta name="keywords" content="nodejs,software developer,resume,berlin,germany" />
+	<meta name="subject" content="resume of a software developer">
+	<meta name="author" content="Dmitry N. Medvedev">
+	<meta name="robots" content="index,follow">
+	<meta name="googlebot" content="index,follow">
+	<meta name="google" content="nositelinkssearchbox">
+	<meta name="google" content="notranslate">
+	<meta name="rating" content="General">
+	<meta name="referrer" content="no-referrer">
+
+	<link rel="me" href="http://bit.ly/2zbHq2t" type="text/html">
+	<link rel="me" href="https://bit.ly/2UxN9aC" type="text/html">
+	<link rel="me" href="https://bit.ly/2UhsatO" type="text/html">
+	<link rel="me" href="mailto:dmitry.medvedev@gmail.com">
+	<link rel="me" href="sms:+4917665213116">
+
+	<meta property="fb:app_id" content="505725733456810">
+	<meta property="og:url" content="https://dmitry-n-medvedev.github.io/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Software Engineer">
+	<meta property="og:description" content="Dmitry N. Medvedev Resume">
+	<meta property="og:site_name" content="Dmitry N. Medvedev Resume">
+	<meta property="og:locale" content="en_US">
+	<meta property="article:author" content="Dmitry N. Medvedev">
+	<meta property="og:image" content="https://pbs.twimg.com/profile_images/895458054539550720/H3aQpXKm_400x400.jpg">
+	<meta property="og:image:alt" content="It's what I look like">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@dmitrynmedvedev">
+	<meta name="twitter:creator" content="@dmitrynmedvedev">
+	<meta name="twitter:url" content="https://twitter.com/dmitrynmedvedev">
+	<meta name="twitter:title" content="Dmitry N. Medvedev">
+	<meta name="twitter:description" content="Software Engineer">
+	<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/895458054539550720/H3aQpXKm_400x400.jpg">
+	<meta name="twitter:image:alt" content="It's what I look like">
 
 	%sapper.base%
 
@@ -24,23 +60,12 @@
 	<link rel='manifest' href='manifest.json' crossorigin='use-credentials'>
 	<link rel='icon' type='image/png' href='favicon.png'>
 
-	<!-- Sapper generates a <style> tag containing critical CSS
-	     for the current page. CSS for the rest of the app is
-	     lazily loaded when it precaches secondary pages -->
 	%sapper.styles%
 
-	<!-- This contains the contents of the <svelte:head> component, if
-	     the current page has one -->
 	%sapper.head%
 </head>
 <body>
-	<!-- The application will be rendered inside this element,
-	     because `src/client.js` references it -->
 	<div id='sapper'>%sapper.html%</div>
-
-	<!-- Sapper creates a <script> tag containing `src/client.js`
-	     and anything else it needs to hydrate the app and
-	     initialise the router -->
 	%sapper.scripts%
 </body>
 </html>
