@@ -30,8 +30,8 @@
   }
 
   .contacts-photo > img {
-    width: 15vw;
-    height: 15vw;
+    width: 10vw;
+    height: 10vw;
     filter: drop-shadow(0px 0px 3px var(--font-color));
   }
 
