@@ -9,7 +9,7 @@
     list-style-type: decimal-leading-zero;
   }
 
-  :global(.ul > li) {
+  :global(.ul li) {
     text-align: left;
   }
 </style>

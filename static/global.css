@@ -34,7 +34,11 @@
 }
 
 * {
-	contain: content;
+  contain: layout;
+  word-break: break-all;
+  hyphens: auto;
+  -webkit-hyphenate-character: auto;
+  overflow-wrap: break-word;
 }
 
 html,
