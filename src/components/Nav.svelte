@@ -32,7 +32,7 @@
 		flex: 1;
 	}
 
-	[aria-current] {
+	/* [aria-current] {
 		position: relative;
 		display: inline-block;
 	}
@@ -45,12 +45,6 @@
 		background-color: rgb(255, 62, 0);
 		display: block;
 		bottom: -1px;
-	}
-
-	/* a {
-		text-decoration: none;
-		display: block;
-		color: var(--font-color);
 	} */
 </style>
 
