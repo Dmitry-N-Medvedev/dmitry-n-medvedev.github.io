@@ -22,6 +22,9 @@
 	--header-color: var(--font-color);
 	--layout-padding: 0.125vw;
 	--timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+	--icon-size: 3vw;
+	--hover-in-ms: 250ms;
+	--hover-out-ms: 1500ms;
 	
 	--highlighted-background-color: hsla(var(--H), var(--S), calc(var(--L) + 59%), var(--A));
 	--highlighted-font-color: hsla(var(--H), var(--S), calc(var(--L) - 10%), var(--A));
@@ -76,7 +79,7 @@ body,
 }
 
 #main {
-	align-items: flex-start;
+	justify-content: stretch;
 	max-width: 60vw;
 }
 
@@ -121,4 +124,13 @@ h1, h2, h3 {
   font-variation-settings: "wght" 1, "opsz" 10, "SRIF" 1;
   font-size: calc(var(--font-size) * 2);
   text-transform: uppercase;
+}
+
+.display-flex {
+	display: flex !important;
+	align-items: center;
+}
+
+.justify-content-flex-end {
+	justify-content: flex-end;
 }
