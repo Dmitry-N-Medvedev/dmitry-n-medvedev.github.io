@@ -1,4 +1,6 @@
 <script>
+	import A from './html/A.svelte';
+
 	export let segment;
 </script>
 
@@ -45,19 +47,18 @@
 		bottom: -1px;
 	}
 
-	a {
+	/* a {
 		text-decoration: none;
-		/* padding: 1em 0.5em; */
 		display: block;
 		color: var(--font-color);
-	}
+	} */
 </style>
 
 <nav>
 	<ul>
 		<li>
 			<h2>
-				<a aria-current='{segment === undefined ? "page" : undefined}' href='.'>CV</a>
+				<A aria-current='{segment === undefined ? "page" : undefined}' href='.'>CV</A>
 			</h2>
 		</li>
 		<!-- <li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li> -->
