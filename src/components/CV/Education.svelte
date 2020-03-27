@@ -5,7 +5,8 @@
 
   export let data = null;
 
-  const formatDate = new Intl.DateTimeFormat('de-DE');
+  const currentLocale = () => (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.language;
+  const formatDate = new Intl.DateTimeFormat(currentLocale());
 
   const dateIssued = (date) => {
     return formatDate.format(new Date(date));
