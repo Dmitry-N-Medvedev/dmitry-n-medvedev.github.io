@@ -23,6 +23,6 @@
   }
 </style>
 
-<a {href} {target} on:click={handleClick} class:underline>
+<a {href} {target} {...$$restProps} on:click={handleClick} class:underline>
   <slot>N/A</slot>
 </a>
