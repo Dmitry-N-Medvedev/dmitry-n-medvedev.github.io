@@ -353,6 +353,17 @@
       ]
     },
     {
+      "year": 2019,
+      "institution": "Lightbend",
+      "url": "https://courses.cognitiveclass.ai/",
+      "certificates": [{
+        "id": "6dbca7efaa2b4dcbb4008a8755e1dfc1",
+        "name": "Reactive Architecture: Introduction to Reactive Systems",
+        "dateIssued": "Jan 23, 2019",
+        "url": "https://bit.ly/2USdbpp"
+      }]
+    },
+    {
       "year": 2010,
       "institution": "Hydropower Corporate University",
       "url": "http://www.korung.rushydro.ru/",
