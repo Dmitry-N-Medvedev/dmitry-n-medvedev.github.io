@@ -32,7 +32,8 @@
     padding: 0 0 0 1.5vw;
   }
 
-  .contacts-photo > img {
+  .contacts-photo > picture,
+  .contacts-photo > picture > img {
     width: var(--profile-photo-size);
     height: var(--profile-photo-size);
     filter: drop-shadow(0px 0px 3px var(--font-color));
@@ -58,7 +59,11 @@
 
 <article class='contacts' itemscope itemtype='http://schema.org/Person'>
   <div class='contacts-photo' itemscope itemtype='http://schema.org/ImageObject'>
-    <img src='/photos/me.jpg' alt='me' itemprop='contentUrl' />
+    <picture>
+      <source type='image/webp' srcset='/photos/me.webp' />
+      <source type='image/jpeg' srcset='/photos/me.jpg' />
+      <img src='/photos/me.jpg' alt='me' itemprop='contentUrl' />
+    </picture>
     <meta itemprop='caption' content='this is how I look like'>
     <meta itemprop='representativeOfPage' content='true'>
     <meta itemprop='jobTitle' content='{data.jobTitle}'>
