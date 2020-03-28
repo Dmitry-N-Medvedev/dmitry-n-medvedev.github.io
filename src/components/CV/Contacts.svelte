@@ -56,16 +56,36 @@
   }
 </style>
 
-<article class='contacts'>
-  <div class='contacts-photo'>
-    <img src='/photos/me.jpg' alt='me' />
+<article class='contacts' itemscope itemtype='http://schema.org/Person'>
+  <div class='contacts-photo' itemscope itemtype='http://schema.org/ImageObject'>
+    <img src='/photos/me.jpg' alt='me' itemprop='contentUrl' />
+    <meta itemprop='caption' content='this is how I look like'>
+    <meta itemprop='representativeOfPage' content='true'>
+    <meta itemprop='jobTitle' content='{data.jobTitle}'>
   </div>
   <div class='contacts-content'>
-    <GridBlockRecord className='display-flex justify-content-flex-end'><span itemprop='name'>{data.name}</span></GridBlockRecord>
-    <GridBlockRecord className='display-flex justify-content-flex-end'>{data.city}</GridBlockRecord>
-    <GridBlockRecord className='display-flex justify-content-flex-end'>{data.country}</GridBlockRecord>
     <GridBlockRecord className='display-flex justify-content-flex-end'>
-      <A href='mailto:{data.email}'><span itemprop='email'>{data.email}</span></A>
+      {data.name.givenName} {data.name.additionalName} {data.name.familyName}
+      <meta itemprop='givenName' content='{data.name.givenName}'>
+      <meta itemprop='additionalName' content='{data.name.additionalName}'>
+      <meta itemprop='familyName' content='{data.name.familyName}'>
+      <meta itemprop='birthDate' content='{data.birthDate}'>
+    </GridBlockRecord>
+    <span itemscope itemtype='http://schema.org/PostalAddress'>
+      <GridBlockRecord className='display-flex justify-content-flex-end'>{data.address.addressLocality}</GridBlockRecord>
+      <GridBlockRecord className='display-flex justify-content-flex-end'>{data.address.addressCountry}</GridBlockRecord>
+      <meta itemprop='addressCountry' content='{data.address.addressCountry}'>
+      <meta itemprop='addressRegion' content='{data.address.addressRegion}'>
+      <meta itemprop='addressLocality' content='{data.address.addressLocality}'>
+    </span>
+    <GridBlockRecord
+      className='display-flex justify-content-flex-end'
+      itemscope
+      itemtype='http://schema.org/ContactPoint'
+    >
+      <A href='mailto:{data.ContactPoint.email}'>{data.ContactPoint.email}</A>
+      <meta itemprop='email' content='{data.ContactPoint.email}'>
+      <meta itemprop='telephone' content='{data.ContactPoint.telephone}'>
     </GridBlockRecord>
     <GridBlockRecord className='display-flex justify-content-flex-end social-network-icons'>
       <!-- see: https://www.flaticon.com/packs/social-circles -->

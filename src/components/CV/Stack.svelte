@@ -149,8 +149,13 @@
   </section>
   <section class='items'>
     {#each Object.keys(items) as item}
-      <div class='stack-item' data-tags={itemTags(item)}>
+      <div class='stack-item' data-tags={itemTags(item)} itemscope itemtype='{((items[item]).schema).itemtype}'>
         {item}
+        {#each Object.keys((items[item]).schema) as key}
+          {#if key !== 'itemtype'}
+            <meta itemprop='{key}' content='{(items[item]).schema[key]}'>
+          {/if}
+        {/each}
       </div>
     {/each}
   </section>

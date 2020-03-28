@@ -1,9 +1,21 @@
 {
   "contacts": {
-    "name": "Dmitry N. Medvedev",
-    "country": "Germany",
-    "city": "Berlin",
-    "email": "dmitry.medvedev@gmail.com",
+    "name": {
+      "givenName": "Dmitry",
+      "familyName": "Medvedev",
+      "additionalName": "N"
+    },
+    "birthDate": "Tue Mar 23 1976",
+    "jobTitle": "software engineer",
+    "address": {
+      "addressCountry": "Germany",
+      "addressRegion": "Berlin",
+      "addressLocality": "Berlin"
+    },
+    "ContactPoint": {
+      "telephone": "+4917665213116",
+      "email": "dmitry.medvedev@gmail.com"
+    },
     "role": "software engineer",
     "links": [
       {
@@ -39,76 +51,255 @@
     ],
     "items": {
       "javascript": {
-        "tags": ["languages", "front-end", "back-end"]
+        "tags": ["languages", "front-end", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/ComputerLanguage",
+          "name": "javascript",
+          "alternateName": "JavaScript",
+          "url": "https://www.ecma-international.org/publications/standards/Ecma-262.htm"
+        }
       },
       "nodejs": {
-        "tags": ["back-end"]
+        "tags": ["back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "Node.js",
+          "alternateName": "node",
+          "url": "https://nodejs.org/",
+          "codeRepository": "https://github.com/nodejs/node"
+        }
       },
       "python": {
-        "tags": ["languages", "back-end"]
+        "tags": ["languages", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/ComputerLanguage",
+          "name": "python",
+          "alternateName": "Python",
+          "url": "https://www.python.org/"
+        }
       },
       "dart": {
-        "tags": ["languages", "front-end"]
+        "tags": ["languages", "front-end"],
+        "schema": {
+          "itemtype": "http://schema.org/ComputerLanguage",
+          "name": "dart",
+          "alternateName": "Dart",
+          "url": "https://dart.dev/"
+        }
       },
       "flutter": {
-        "tags": ["frameworks", "front-end"]
+        "tags": ["frameworks", "front-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "Flutter",
+          "alternateName": "flutter",
+          "url": "https://flutter.dev/",
+          "codeRepository": "https://github.com/flutter/flutter"
+        }
       },
       "redis": {
-        "tags": ["databases", "back-end"]
+        "tags": ["databases", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "database",
+          "downloadUrl": "http://download.redis.io/redis-stable.tar.gz",
+          "name": "Redis",
+          "alternateName": "redis",
+          "url": "https://redis.io/",
+          "codeRepository": "https://github.com/antirez/redis"
+        }
       },
       "postgres": {
-        "tags": ["databases", "back-end"]
+        "tags": ["databases", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "database",
+          "downloadUrl": "https://www.postgresql.org/download/",
+          "name": "PostgreSQL",
+          "alternateName": "postgres",
+          "url": "https://www.postgresql.org/",
+          "codeRepository": "https://git.postgresql.org/gitweb/?p=postgresql.git"
+        }
       },
       "mysql": {
-        "tags": ["databases", "back-end"]
+        "tags": ["databases", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "database",
+          "downloadUrl": "https://www.mysql.com/downloads/",
+          "name": "MySQL",
+          "alternateName": "mysql",
+          "url": "https://www.mysql.com/"
+        }
       },
       "neo4j": {
-        "tags": ["databases", "back-end"]
+        "tags": ["databases", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "database",
+          "downloadUrl": "https://neo4j.com/download/",
+          "name": "Neo4J",
+          "alternateName": "neo4j",
+          "url": "https://neo4j.com/"
+        }
       },
       "nginx": {
-        "tags": ["servers", "back-end"]
+        "tags": ["servers", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "web server",
+          "downloadUrl": "http://nginx.org/en/download.html",
+          "name": "NGINX",
+          "alternateName": "nginx",
+          "url": "http://nginx.org/"
+        }
       },
       "apache": {
-        "tags": ["servers", "back-end"]
+        "tags": ["servers", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "web server",
+          "downloadUrl": "http://httpd.apache.org/download.cgi",
+          "name": "Apache HTTP Server",
+          "alternateName": "apache",
+          "url": "http://httpd.apache.org/"
+        }
       },
       "RabbitMQ": {
-        "tags": ["servers", "back-end"]
+        "tags": ["servers", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "message broker",
+          "downloadUrl": "https://www.rabbitmq.com/download.html",
+          "name": "RabbitMQ",
+          "alternateName": "rabbitmq",
+          "url": "https://www.rabbitmq.com/"
+        }
       },
       "WebSockets": {
-        "tags": ["technology", "front-end", "back-end"]
+        "tags": ["technology", "front-end", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "networking protocol",
+          "name": "WebSockets",
+          "alternateName": "websockets",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+        }
       },
       "Svelte": {
-        "tags": ["front-end", "frameworks"]
+        "tags": ["front-end", "frameworks"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "Svelte",
+          "alternateName": "svelte",
+          "url": "https://svelte.dev/",
+          "codeRepository": "https://github.com/sveltejs/svelte"
+        }
       },
       "React/Redux/Redux-Saga": {
-        "tags": ["front-end", "frameworks"]
+        "tags": ["front-end", "frameworks"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "ReactJS",
+          "alternateName": "reactjs",
+          "url": "https://reactjs.org/",
+          "codeRepository": "https://github.com/facebook/react/"
+        }
       },
       "μWebSockets": {
-        "tags": ["libraries", "front-end", "back-end"]
+        "tags": ["libraries", "front-end", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "μWebSockets",
+          "alternateName": "uWebSockets",
+          "url": "https://github.com/uNetworking/uWebSockets.js",
+          "codeRepository": "https://github.com/uNetworking/uWebSockets.js"
+        }
       },
       "flatbuffers": {
-        "tags": ["libraries", "front-end", "back-end"]
+        "tags": ["libraries", "front-end", "back-end"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareSourceCode",
+          "name": "Flatbuffers",
+          "alternateName": "flatbuffers",
+          "url": "https://google.github.io/flatbuffers/",
+          "codeRepository": "https://github.com/google/flatbuffers"
+        }
       },
       "git": {
-        "tags": ["tools"]
+        "tags": ["tools"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "VCS",
+          "downloadUrl": "https://git-scm.com/downloads",
+          "name": "Git",
+          "alternateName": "git",
+          "url": "https://git-scm.com/"
+        }
       },
       "gitlab": {
-        "tags": ["tools"]
+        "tags": ["tools"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "VCS",
+          "downloadUrl": "https://about.gitlab.com/free-trial/",
+          "name": "Gitlab",
+          "alternateName": "gitlab",
+          "url": "https://about.gitlab.com/"
+        }
       },
       "confluence": {
-        "tags": ["tools"]
+        "tags": ["tools"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "collaboration tool",
+          "downloadUrl": "https://www.atlassian.com/purchase/product/confluence",
+          "name": "Confluence",
+          "alternateName": "confluence",
+          "url": "https://www.atlassian.com/software/confluence"
+        }
       },
       "jira": {
-        "tags": ["tools"]
+        "tags": ["tools"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "issue tracking",
+          "downloadUrl": "https://www.atlassian.com/software/jira/free",
+          "name": "Jira",
+          "alternateName": "jira",
+          "url": "https://www.atlassian.com/software/jira"
+        }
       },
       "linux": {
-        "tags": ["os"]
+        "tags": ["os"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "operating system",
+          "downloadUrl": "https://www.linux.org/pages/download/",
+          "name": "Linux",
+          "alternateName": "linux",
+          "url": "https://www.linux.org/"
+        }
       },
       "mac os": {
-        "tags": ["os"]
+        "tags": ["os"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "operating system",
+          "name": "Mac OS",
+          "alternateName": "macos",
+          "url": "https://www.apple.com/macos/"
+        }
       },
       "docker": {
-        "tags": ["containers"]
+        "tags": ["containers"],
+        "schema": {
+          "itemtype": "http://schema.org/SoftwareApplication",
+          "applicationCategory": "container runtime",
+          "name": "Docker",
+          "alternateName": "docker",
+          "url": "https://www.docker.com/"
+        }
       }
     }
   },
@@ -371,7 +562,7 @@
         {
           "id": null,
           "name": "ITIL: Incident Management",
-          "dateIssued": null,
+          "dateIssued": "Jan 23, 2010",
           "url": null
         }
       ]
@@ -384,7 +575,7 @@
         {
           "id": null,
           "name": "WatchGuard managed distributed secure systems",
-          "dateIssued": null,
+          "dateIssued": "Jan 23, 2009",
           "url": null
         }
       ]
@@ -397,7 +588,7 @@
         {
           "id": null,
           "name": "Software patenting",
-          "dateIssued": null,
+          "dateIssued": "Jan 23, 2009",
           "url": null
         }
       ]
@@ -410,13 +601,13 @@
         {
           "id": null,
           "name": "English Language Dept.",
-          "dateIssued": null,
+          "dateIssued": "Jun 01, 1998",
           "url": null
         },
         {
           "id": null,
           "name": "Course in child psychology",
-          "dateIssued": null,
+          "dateIssued": "Jun 01, 1998",
           "url": null
         }
       ]

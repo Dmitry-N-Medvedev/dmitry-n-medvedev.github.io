@@ -113,30 +113,34 @@
     <h2>education</h2>
   {/if}
   {#each data as record}
-    <div class='education-record'>
-      <div class='education-record-year'>{record.year}</div>
+    <div class='education-record' itemscope itemprop='http://schema.org/EducationalOccupationalProgram'>
+      <div class='education-record-year' itemprop='endDate'>{record.year}</div>
       <div class='education-record-info'>
-        <A href={record.url} target='_blank'>
+        <A href='{record.url}' target='_blank'>
           <div class='education-record-info-institution'>
             {record.institution}
+            <meta itemprop='name' content='{record.institution}'>
           </div>
         </A>
         {#if record.certificates && record.certificates.length > 0}
           <div class='education-record-info-certificates'>
             <UL>
               {#each record.certificates as certificate}
-                <li class='education-record-info-certificate'>
+                <li class='education-record-info-certificate' itemscope itemprop='additionalType' href='http://schema.org/educationalCredentialAwarded'>
+                  <meta itemprop='endDate' content='{data.dateIssued}'>
                   {#if certificate.name}
-                    <A href={certificate.url} underline={false}>
-                      <div class='education-record-info-certificate-name'>{certificate.name}</div>
-                    </A>
+                  <A href='{certificate.url}' underline={false}>
+                    <div class='education-record-info-certificate-name' itemprop='name'>{certificate.name}</div>
+                    <meta itemprop='educationalCredentialAwarded' content='{certificate.name}'>
+                    <meta itemprop='url' content='{certificate.url}'>
+                  </A>
                   {/if}
                   {#if certificate.id}
-                    <A href={certificate.url} underline={false}>
+                    <A href='{certificate.url}' underline={false}>
                       <div class='education-record-info-certificate-id'>ID: {certificate.id}</div>
                     </A>
                   {:else}
-                    <A href={certificate.url} underline={false}>
+                    <A href='{certificate.url}' underline={false}>
                       <div class='education-record-info-certificate-id'>&nbsp;&nbsp;&nbsp;</div>
                     </A>
                   {/if}

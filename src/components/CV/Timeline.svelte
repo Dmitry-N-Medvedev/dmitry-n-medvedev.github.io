@@ -188,29 +188,32 @@
     <h2>employement record</h2>
   {/if}
   {#each data as record}
-    <article class='timeline-item'>
+    <article class='timeline-item' itemscope itemprop='http://schema.org/EmployeeRole'>
       <div class='timeline-item-dates'>
-        <div class='timeline-item-dates-started'>{record.started}</div>
-        <div class='timeline-item-dates-ended'>{record.ended}</div>
+        <div class='timeline-item-dates-started' itemprop='startDate'>{record.started}</div>
+        <div class='timeline-item-dates-ended' itemprop='endDate'>{record.ended}</div>
       </div>
       <div class='timeline-item-info'>
-        <div class='timeline-item-info-company'>
-          <div class='timeline-item-info-company-name'>
+        <div class='timeline-item-info-company' itemprop='additionalType' href='http://schema.org/Organization'>
+          <div class='timeline-item-info-company-name' itemprop='legalName'>
             {record.info.company.name}
           </div>
           {#if record.info.company.description.length > 0}
-            <div class='timeline-item-info-company-description'>{record.info.company.description}</div>
+            <div class='timeline-item-info-company-description' itemprop='slogan'>
+              {record.info.company.description}
+            </div>
           {/if}
         </div>
         <div class='timeline-item-info-role'>
-          <div class='timeline-item-info-role-name'>
+          <div class='timeline-item-info-role-name' itemprop='roleName'>
             {record.info.role.name}
           </div>
           <div class='timeline-item-info-role-responsibilities'>
             <div class='timeline-item-info-role-responsibilities-header'>responsibilities</div>
-            <div class='timeline-item-info-role-responsibilities-items'>
+            <div class='timeline-item-info-role-responsibilities-items' itemprop='additionalType' href='responsibilities'>
               {#if record.info.role.responsibilities.length === 1}
                 {record.info.role.responsibilities}
+
               {:else}
                 <UL>
                   {#each record.info.role.responsibilities as responsibility}
@@ -226,7 +229,10 @@
             <div class='timeline-item-info-stack-header'>stack</div>
             <div class='timeline-item-info-stack-items'>
               {#each record.info.stack as stack_item}
-                <div class='stack-item'>{stack_item}</div>
+                <div class='stack-item' itemprop='additionalType' href='http://schema.org/instrument'>
+                  {stack_item}
+                  <meta itemprop='tool' content='{stack_item}'>
+                </div>
               {/each}
             </div>
           </div>
