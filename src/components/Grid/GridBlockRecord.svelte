@@ -9,6 +9,6 @@
   }
 </style>
 
-<div class='grid-block-record {className}'>
+<div class='grid-block-record {className}' {...$$restProps}>
   <slot>N/A</slot>
 </div>

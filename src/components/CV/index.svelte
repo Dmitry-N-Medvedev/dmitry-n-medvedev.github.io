@@ -21,7 +21,7 @@
   }
 </style>
 
-<article id='cv' itemscope itemtype='http://schema.org/Person'>
+<article id='cv'>
   {#if data}
     {#if data.contacts}
       <GridBlock>
