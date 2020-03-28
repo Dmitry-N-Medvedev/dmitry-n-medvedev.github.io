@@ -7,6 +7,9 @@
 </script>
 
 <style>
+  :root {
+    --profile-photo-size: 12vw;
+  }
   .contacts {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -30,8 +33,8 @@
   }
 
   .contacts-photo > img {
-    width: 10vw;
-    height: 10vw;
+    width: var(--profile-photo-size);
+    height: var(--profile-photo-size);
     filter: drop-shadow(0px 0px 3px var(--font-color));
   }
 

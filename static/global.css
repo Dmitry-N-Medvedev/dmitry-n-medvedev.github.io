@@ -35,10 +35,11 @@
 
 * {
   contain: layout;
-  word-break: break-all;
+  word-break: break-word;
   hyphens: auto;
   -webkit-hyphenate-character: auto;
-  overflow-wrap: break-word;
+	overflow-wrap: break-word;
+	position: relative;
 }
 
 html,
@@ -65,7 +66,7 @@ body {
 	height: auto;
 
 	user-select: none;
-	pointer-events: none;
+	/* pointer-events: none; */
 
 	position: relative;
 }
@@ -141,4 +142,19 @@ h1, h2, h3 {
 
 .justify-content-flex-end {
 	justify-content: flex-end;
+}
+
+a {
+	color: var(--font-color);
+	text-decoration: none;
+	pointer-events: all;
+}
+
+/* .a {
+	border-bottom: 1px solid var(--header-color);
+} */
+
+.copy {
+	display: inline;
+	padding: 0 calc(var(--layout-padding) * 2);
 }
