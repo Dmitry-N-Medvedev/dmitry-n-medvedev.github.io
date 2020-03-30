@@ -35,7 +35,7 @@
       }
     ]
   },
-  "foreword": "A never ending learner, software architect and full-stack developer. Looking for an opportunity to bring quality technology, style and speed to real - sector economy. I do firmly believe that a system of any significance can nowadays be built only by a team. And a team, as opposed to a group of people, is grown around openness and truth. I want to be a part of a team, or help build a new one.",
+  "foreword": "A never ending learner, software architect and full-stack developer. Looking for an opportunity to bring quality technology, style and speed to real economy. I do firmly believe that a system of any significance can nowadays be built only by a team. And a team, as opposed to a group of people, is grown around openness and truth. I want to be a part of a team, or help build a new one.",
   "stack": {
     "tags": [
       "languages",
@@ -305,6 +305,35 @@
   },
   "timeline": [
     {
+      "started": "Sept 2018",
+      "ended": "Dec 2019",
+      "info": {
+        "company": {
+          "name": "a tiny side project of mine",
+          "description": "An automation utility for restaurants that has never come into being"
+        },
+        "comment": "/html/kaufmann.html",
+        "role": {
+          "name": "Product Manager/CTO/Architect/Full-Stack Developer",
+          "responsibilities": [
+            "collect requirements",
+            "(continuously) refine product definition",
+            "design system architecture and choose proper tools",
+            "implement a prototype"
+          ]
+        },
+        "stack": [
+          "nodejs",
+          "svelte",
+          "redis",
+          "postgres",
+          "rabbitmq",
+          "websockets",
+          "flatbuffers"
+        ]
+      }
+    },
+    {
       "started": "Mar 2018",
       "ended": "Aug 2018",
       "info": {
@@ -312,6 +341,7 @@
           "name": "FCG Germany GmbH",
           "description": "Leading the digitization of the automotive sales sector through technology, infrastructure creation and the promotion of transportation financing solutions for SME and aspiring consumers in these frontier markets."
         },
+        "comment": "/html/fcg.html",
         "role": {
           "name": "software engineer",
           "responsibilities": [
@@ -335,12 +365,13 @@
           "name": "Eine",
           "description": "Fintech startup aimed at helping its customers optimize their spendings and receive exclusive health insurance and electricity contracts."
         },
+        "comment": "/html/eine.html",
         "role": {
           "name": "CTO/full-stack developer",
           "responsibilities": [
             "develop the first draft of the architecture",
-            "define the processes related to development",
-            "organize initial data load and processing"
+            "define the shared principles related to development",
+            "manage outsourced data analyst and organize initial data load and processing"
           ]
         },
         "stack": [
