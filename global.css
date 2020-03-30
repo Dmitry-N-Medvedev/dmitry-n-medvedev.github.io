@@ -31,6 +31,10 @@
 	--accented-color: hsla(calc(var(--H) + 30), calc(var(--S) + 100%), calc(var(--L) + 24%), var(--A));
 	--accented-color-hover: hsla(calc(var(--H) + 30), calc(var(--S) + 100%), calc(var(--L) + 24%), calc(var(--A) / 3));
 	--drop-shadow-color: hsla(var(--H), var(--S), calc(var(--L) + 40%), var(--A));
+
+	--row-height-min: 8vh;
+	--row-height-max: 4rem;
+	--row-height: minmax(var(--row-height-min), var(--row-height-max));
 }
 
 * {
