@@ -29,7 +29,7 @@
     grid-template-areas:
       'timeline-item-dates timeline-item-info'
     ;
-    padding: 2.5vh 1.5vw;
+    /* padding: 2.5vh 1.5vw; */
     position: relative;
   }
   
@@ -118,10 +118,8 @@
   .timeline-item-info-company-description {
     padding: var(--timeline-item-info-company-description-padding-top) 0;
     font-variation-settings: var(--font-variation-settings-description);
-    line-height: 2.5vh;
     justify-content: flex-start;
     margin: 1.5vh 0;
-    line-height: 3.5vh;
   }
 
   .timeline-item-info-role-responsibilities,
