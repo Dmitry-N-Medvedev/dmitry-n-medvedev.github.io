@@ -63,7 +63,7 @@
   .stack {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: min-content 4vh 1fr;
+    grid-template-rows: min-content var(--row-height) 1fr;
     grid-template-areas:
       'stack-header'
       'stack-tags'
@@ -78,16 +78,17 @@
 
   .stack > .tags {
     grid-area: stack-tags;
-    display: flex;
-    contain: strict;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
   }
 
   .stack > .items {
     grid-area: stack-items;
-    contain: strict;
+    /* contain: strict; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 8vh;
+    grid-auto-rows: var(--row-height);
     grid-gap: calc(var(--layout-padding) / 2);
   }
 
@@ -112,7 +113,7 @@
     border-bottom: 1px solid transparent;
     transition: border-bottom-color 500ms var(--timing-function);
     will-change: border-bottom-color;
-    contain: strict;
+    /* contain: strict; */
     pointer-events: all;
   }
 
