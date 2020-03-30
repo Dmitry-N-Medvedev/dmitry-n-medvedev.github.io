@@ -2,6 +2,8 @@
   import UL from '../html/UL.svelte';
 
   export let data = null;
+
+  const retrieveComment = async (url) => await (await fetch(url, {})).text();
 </script>
 
 <style>
@@ -72,6 +74,7 @@
     grid-gap: 3vh;
     grid-template-areas:
       'timeline-item-info-company'
+      'timeline-item-project-comment'
       'timeline-item-info-role'
     ;
     position: relative;
@@ -115,9 +118,14 @@
     position: relative;
   }
 
+  .timeline-item-project-comment {
+    grid-area: timeline-item-project-comment;
+    /* background-color: yellowgreen; */
+  }
+
   .timeline-item-info-company-description {
     padding: var(--timeline-item-info-company-description-padding-top) 0;
-    font-variation-settings: var(--font-variation-settings-description);
+    /* font-variation-settings: var(--font-variation-settings-description); */
     justify-content: flex-start;
     margin: 1.5vh 0;
   }
@@ -202,6 +210,15 @@
             </div>
           {/if}
         </div>
+        {#if record.info.comment}
+          <aside class='timeline-item-project-comment'>
+            {#await retrieveComment(record.info.comment)}
+              <div>waiting...</div>
+            {:then comment}
+              {@html comment}
+            {/await}
+          </aside>
+        {/if}
         <div class='timeline-item-info-role'>
           <div class='timeline-item-info-role-name' itemprop='roleName'>
             {record.info.role.name}

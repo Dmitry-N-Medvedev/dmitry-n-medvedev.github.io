@@ -154,6 +154,11 @@ a {
 	pointer-events: all;
 }
 
+a.term {
+	background-color: hsla(183, 100%, 63%, 0.30);
+	padding: 0 0.25vw;
+}
+
 /* .a {
 	border-bottom: 1px solid var(--header-color);
 } */
@@ -161,4 +166,9 @@ a {
 .copy {
 	display: inline;
 	padding: 0 calc(var(--layout-padding) * 2);
+}
+
+dl > dt:not(:first-of-type),
+dl dd:not(:first-of-type) {
+	margin-top: 1rem;
 }
