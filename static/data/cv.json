@@ -320,7 +320,8 @@
             "(continuously) refine product definition",
             "design system architecture and choose proper tools",
             "implement a prototype"
-          ]
+          ],
+          "subordinates": 0
         },
         "stack": [
           "nodejs",
@@ -346,7 +347,8 @@
           "name": "software engineer",
           "responsibilities": [
             "participate in building the auction subsystem"
-          ]
+          ],
+          "subordinates": 0
         },
         "stack": [
           "nodejs",
@@ -372,7 +374,8 @@
             "develop the first draft of the architecture",
             "define the shared principles related to development",
             "manage outsourced data analyst and organize initial data load and processing"
-          ]
+          ],
+          "subordinates": 2
         },
         "stack": [
           "nodejs",
@@ -400,7 +403,8 @@
             "Re-created the design of the front-end via Flexbox and CSS Grid",
             "Implemented data push to the client device via  WebSockets for near real-time data update",
             "Created a live-search facility with help of Redis for the customers to be able to find any transaction by any significant search token in less than a second"
-          ]
+          ],
+          "subordinates": 0
         },
         "stack": [
           "react",
@@ -428,7 +432,8 @@
           "name": "full-stack developer",
           "responsibilities": [
             "Architecture and implement a microservice-based system for video transcoding"
-          ]
+          ],
+          "subordinates": 0
         },
         "stack": [
           "aws",
@@ -459,7 +464,8 @@
             "Prepare business and technical presentations",
             "Manage servers (Debian Linux) and security",
             "Develop the ZeeRabbit Build Conveyer in Cmake"
-          ]
+          ],
+          "subordinates": 4
         },
         "stack": [
           "ZeroC ICE",
@@ -481,7 +487,8 @@
           "name": "IT Manager",
           "responsibilities": [
             "Manage development of invel.ru and smartgrid.ru portals"
-          ]
+          ],
+          "subordinates": 8
         },
         "stack": []
       }
@@ -498,7 +505,8 @@
           "name": "First-Line Support Team Manager",
           "responsibilities": [
             "Incident management (ITIL)"
-          ]
+          ],
+          "subordinates": 12
         },
         "stack": []
       }
@@ -519,7 +527,8 @@
             "Manage technical and user documentation",
             "Help employees move to the Infor LX CRM",
             "Establish technical support Dept."
-          ]
+          ],
+          "subordinates": 2
         },
         "stack": []
       }
@@ -536,7 +545,8 @@
           "name": "Head of Intellectual Property Dept.",
           "responsibilities": [
             "Manage software technology patenting projects"
-          ]
+          ],
+          "subordinates": 8
         },
         "stack": []
       }
@@ -555,7 +565,8 @@
             "Participate in technology patenting projects in Russia and USA",
             "Consult technical project managers regarding choosing right software packages in regards to licensing matters",
             "Supervise the marketing materials published by the company so that no know-how technologies and sensitive insights were exposed"
-          ]
+          ],
+          "subordinates": 2
         },
         "stack": []
       }

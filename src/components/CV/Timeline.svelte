@@ -131,7 +131,8 @@
   }
 
   .timeline-item-info-role-responsibilities,
-  .timeline-item-info-stack {
+  .timeline-item-info-stack,
+  .timeline-item-info-role-subordinates {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: min-content;
@@ -155,6 +156,23 @@
     justify-content: flex-end;
     align-items: flex-start;
     padding: 1vh 0.25vw;
+  }
+
+  .timeline-item-info-role-subordinates {
+    grid-template-areas:
+      'timeline-item-info-role-subordinates-title timeline-item-info-role-subordinates-number'
+    ;
+  }
+
+  .timeline-item-info-role-subordinates-title {
+    grid-area: timeline-item-info-role-subordinates-title;
+  }
+
+  .timeline-item-info-role-subordinates-number {
+    grid-area: timeline-item-info-role-subordinates-number;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid hsl(0, 0%, 94%);
   }
 
   .timeline-item-info-stack {
@@ -238,6 +256,12 @@
               {/if}
             </div>
           </div>
+          {#if record.info.role.subordinates}
+            <div class='timeline-item-info-role-subordinates'>
+              <div class='timeline-item-info-role-subordinates-title'>subordinates</div>
+              <div class='timeline-item-info-role-subordinates-number'>{record.info.role.subordinates}</div>
+            </div>
+          {/if}
         </div>
         {#if record.info.stack.length > 0}
         <div class='timeline-item-info-stack'>
