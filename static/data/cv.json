@@ -391,6 +391,7 @@
           "name": "Cubits",
           "description": "An all-inclusive platform to buy, sell and accept Bitcoin."
         },
+        "comment": "/html/cubits.html",
         "role": {
           "name": "full-stack developer",
           "responsibilities": [
