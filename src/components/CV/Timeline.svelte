@@ -3,7 +3,11 @@
 
   export let data = null;
 
-  const retrieveComment = async (url) => await (await fetch(url, {})).text();
+  const retrieveComment = async (url) => {
+    console.debug('retrieveComment', url);
+
+    return await (await fetch(url, {})).text()
+  };
 </script>
 
 <style>
@@ -120,6 +124,7 @@
 
   .timeline-item-project-comment {
     grid-area: timeline-item-project-comment;
+
     font-size: 1vw;
   }
 
