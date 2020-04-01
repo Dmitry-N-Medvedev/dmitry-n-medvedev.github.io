@@ -1,0 +1,30 @@
+<dl>
+  <dt>Why I was hired</dt>
+  <dd>
+    Cubits used home grown CRM - Cubits Management Interface - written in Django. All was good until the CEO brought back from his business journey twice
+    as many customers as the company had.
+  </dd>
+  <dd>
+    The CMI started to choke on the amount of data. I was given a carte blanche to fix it however I want.
+  </dd>
+  <dl>
+    <dt>How I fixed it</dt>
+    <dd>
+      After playing a bit with Django, I decided it was high time to go away from monolyth to microservices.
+    </dd>
+    <dd>
+      The system has been split into separate layers: the front-end and the back-end. The front-end ran by NodeJS and React/Redux.
+      The front-end was talking to the back-end via a websocket connection. Each command from the front-end would be transmitted 
+      to the RabbitMQ server and routed further according to the back-end logic to appropriate handlers (microservices). As soon as a reqest is done
+      its result would be pushed back to the front-end.
+    </dd>
+    <dd>
+      In order to incure as little of a load as possible onto the main system, I organized data transfer from the main database to a Postgres/Redis instances.
+    </dd>
+    <dd>
+      As soon as data migration pipeline was ready, I have implemented a live search feature. Should you need to search for a transaction by any of its
+      attributes (transaction time, its owner, its value, etc) you would just start typing attributes in the search field and the back-end would push 
+      the suggestions back to your browser.
+    </dd>
+  </dl>
+</dl>
